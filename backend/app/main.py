@@ -14,13 +14,13 @@ from app.middleware import RateLimitMiddleware
 async def lifespan(app: FastAPI):
     """Application startup and shutdown events."""
     settings = get_settings()
-    print(f"🚀 {settings.APP_NAME} v{settings.APP_VERSION} starting...")
-    print(f"   Gemini API: {'✅ configured' if settings.GEMINI_API_KEY else '❌ not configured'}")
-    print(f"   Supabase: {'✅ configured' if settings.SUPABASE_URL else '❌ not configured'}")
-    print(f"   HuggingFace: {'✅ configured' if settings.HUGGINGFACE_API_KEY else '⚠️  not configured (optional)'}")
-    print(f"   Resend: {'✅ configured' if settings.RESEND_API_KEY else '⚠️  not configured (emails will log to console)'}")
+    print(f"[START] {settings.APP_NAME} v{settings.APP_VERSION} starting...")
+    print(f"   Gemini API: {'[OK] configured' if settings.GEMINI_API_KEY else '[MISSING] not configured'}")
+    print(f"   Supabase: {'[OK] configured' if settings.SUPABASE_URL else '[MISSING] not configured'}")
+    print(f"   HuggingFace: {'[OK] configured' if settings.HUGGINGFACE_API_KEY else '[WARN] not configured (optional)'}")
+    print(f"   Resend: {'[OK] configured' if settings.RESEND_API_KEY else '[WARN] not configured (emails will log to console)'}")
     yield
-    print(f"👋 {settings.APP_NAME} shutting down...")
+    print(f"[SHUTDOWN] {settings.APP_NAME} shutting down...")
 
 
 # Create FastAPI app
