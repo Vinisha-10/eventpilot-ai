@@ -71,15 +71,15 @@ export default function LandingPage() {
       <nav className="fixed top-0 w-full z-50 glass-card-static" style={{ borderRadius: 0, borderTop: 'none', borderLeft: 'none', borderRight: 'none' }}>
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center">
               <Sparkles className="w-5 h-5 text-white" />
             </div>
-            <span className="text-lg font-bold text-white">EventPilot<span className="text-indigo-400">AI</span></span>
+            <span className="text-lg font-bold text-primary brand-title">EventPilot <span className="brand-accent">AI</span></span>
           </div>
           <div className="hidden md:flex items-center gap-8">
-            <a href="#features" className="text-sm text-gray-400 hover:text-white transition-colors">Features</a>
-            <a href="#events" className="text-sm text-gray-400 hover:text-white transition-colors">Event Types</a>
-            <a href="#testimonials" className="text-sm text-gray-400 hover:text-white transition-colors">Testimonials</a>
+            <a href="#features" className="text-sm text-gray-500 hover:text-primary transition-colors">Features</a>
+            <a href="#events" className="text-sm text-gray-500 hover:text-primary transition-colors">Event Types</a>
+            <a href="#testimonials" className="text-sm text-gray-500 hover:text-primary transition-colors">Testimonials</a>
           </div>
           <div className="flex items-center gap-3">
             <Link href="/login" className="btn-ghost text-sm">Log In</Link>
@@ -97,20 +97,18 @@ export default function LandingPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-indigo-500/30 bg-indigo-500/10 mb-8">
-              <Zap className="w-4 h-4 text-indigo-400" />
-              <span className="text-sm text-indigo-300">Powered by Google Gemini AI</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-pink-500/20 bg-pink-500/5 mb-8">
+              <Zap className="w-4 h-4 text-primary-500" />
+              <span className="text-sm text-primary-600 font-medium">Powered by Google Gemini AI</span>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              <span className="text-white">Plan Any Event</span>
-              <br />
-              <span className="bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                With AI Superpowers
-              </span>
+            <h1 className="text-6xl md:text-8xl mb-8 leading-none tracking-tight text-center max-w-3xl mx-auto select-none">
+              <span className="brand-title block text-5xl md:text-8xl font-black text-primary">EVENT</span>
+              <span className="brand-title block text-5xl md:text-8xl font-black text-primary">DESIGNING</span>
+              <span className="font-editorial italic font-normal text-accent-500 block text-6xl md:text-9xl -mt-4 md:-mt-8 ml-20 md:ml-40">Company</span>
             </h1>
 
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+            <p className="text-xl text-gray-500 max-w-2xl mx-auto mb-10 leading-relaxed">
               From weddings to conferences, EventPilot AI handles planning, budgeting, vendors, 
               guests, and marketing — so you can focus on creating unforgettable experiences.
             </p>
@@ -141,7 +139,7 @@ export default function LandingPage() {
           >
             {stats.map((stat, i) => (
               <div key={i} className="glass-card p-6 text-center">
-                <div className="text-3xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                <div className="text-3xl font-bold text-accent-500">
                   {stat.value}
                 </div>
                 <div className="text-sm text-gray-500 mt-1">{stat.label}</div>

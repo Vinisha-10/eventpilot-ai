@@ -40,13 +40,13 @@ export default function LoginPage() {
         {/* Logo */}
         <div className="text-center mb-8">
           <Link href="/" className="inline-flex items-center gap-2 mb-6">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center">
               <Sparkles className="w-6 h-6 text-white" />
             </div>
-            <span className="text-xl font-bold text-white">EventPilot<span className="text-indigo-400">AI</span></span>
+            <span className="text-xl font-bold text-primary brand-title">EventPilot <span className="brand-accent">AI</span></span>
           </Link>
-          <h1 className="text-2xl font-bold text-white">Welcome back</h1>
-          <p className="text-gray-400 text-sm mt-1">Sign in to your account</p>
+          <h1 className="text-2xl font-bold text-primary">Welcome back</h1>
+          <p className="text-gray-500 text-sm mt-1">Sign in to your account</p>
         </div>
 
         {/* Form */}
@@ -104,7 +104,7 @@ export default function LoginPage() {
           <div className="mt-6 text-center">
             <p className="text-sm text-gray-500">
               Don&apos;t have an account?{' '}
-              <Link href="/signup" className="text-indigo-400 hover:text-indigo-300 font-medium">
+              <Link href="/signup" className="text-primary-500 hover:text-primary-600 font-medium">
                 Sign Up
               </Link>
             </p>

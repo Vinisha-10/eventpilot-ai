@@ -59,12 +59,12 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
       {/* Sidebar */}
       <aside className={`sidebar ${sidebarOpen ? 'open' : ''}`}>
         {/* Logo */}
-        <div className="p-5 flex items-center justify-between border-b border-white/5">
+        <div className="p-5 flex items-center justify-between border-b border-surface-300">
           <Link href="/dashboard" className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
+            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center">
               <Sparkles className="w-5 h-5 text-white" />
             </div>
-            <span className="text-base font-bold text-white">EventPilot<span className="text-indigo-400">AI</span></span>
+            <span className="text-base font-bold text-primary brand-title">EventPilot <span className="brand-accent">AI</span></span>
           </Link>
           <button onClick={() => setSidebarOpen(false)} className="md:hidden text-gray-400 hover:text-white">
             <X className="w-5 h-5" />
@@ -102,13 +102,13 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         </nav>
 
         {/* User */}
-        <div className="p-4 border-t border-white/5">
+        <div className="p-4 border-t border-surface-300">
           <div className="flex items-center gap-3 px-3 py-2">
-            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white text-sm font-semibold">
+            <div className="w-8 h-8 rounded-full bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center text-white text-sm font-semibold">
               {user.email?.[0]?.toUpperCase() || 'U'}
             </div>
             <div className="flex-1 min-w-0">
-              <div className="text-sm font-medium text-white truncate">
+              <div className="text-sm font-medium text-primary truncate">
                 {user.user_metadata?.full_name || user.email}
               </div>
               <div className="text-xs text-gray-500 truncate">{user.email}</div>
