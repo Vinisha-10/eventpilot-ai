@@ -8,48 +8,8 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import {
-  Sparkles, Calendar, Users, BarChart3, MessageSquare,
-  MapPin, Zap, Shield, ArrowRight, Star, CheckCircle2
+  Sparkles, Calendar, Users, MapPin, Zap, Shield, ArrowRight, Star, CheckCircle2
 } from 'lucide-react';
-
-const features = [
-  {
-    icon: <Sparkles className="w-6 h-6" />,
-    title: 'AI-Powered Planning',
-    description: 'Generate complete event plans with timelines, checklists, and milestones in seconds.',
-    color: 'from-violet-500 to-purple-500',
-  },
-  {
-    icon: <BarChart3 className="w-6 h-6" />,
-    title: 'Smart Budget Tracking',
-    description: 'AI analyzes your spending and suggests optimizations to save money.',
-    color: 'from-emerald-500 to-teal-500',
-  },
-  {
-    icon: <MapPin className="w-6 h-6" />,
-    title: 'Vendor Discovery',
-    description: 'Find and compare vendors nearby with ratings, pricing, and AI recommendations.',
-    color: 'from-blue-500 to-cyan-500',
-  },
-  {
-    icon: <Users className="w-6 h-6" />,
-    title: 'Guest Management',
-    description: 'QR tickets, RSVP tracking, seating plans, and automated invitation emails.',
-    color: 'from-pink-500 to-rose-500',
-  },
-  {
-    icon: <MessageSquare className="w-6 h-6" />,
-    title: 'AI Chat Assistant',
-    description: '"Plan my wedding" — just ask. Our AI understands natural language commands.',
-    color: 'from-amber-500 to-orange-500',
-  },
-  {
-    icon: <Calendar className="w-6 h-6" />,
-    title: 'Auto Scheduling',
-    description: 'Intelligent scheduling with calendar sync, reminders, and conflict detection.',
-    color: 'from-indigo-500 to-blue-500',
-  },
-];
 
 const eventTypes = [
   '💒 Weddings', '🎂 Birthday Parties', '🎓 College Festivals',
@@ -77,7 +37,7 @@ export default function LandingPage() {
             <span className="text-lg font-bold text-primary brand-title">EventPilot <span className="brand-accent">AI</span></span>
           </div>
           <div className="hidden md:flex items-center gap-8">
-            <a href="#features" className="text-sm text-gray-500 hover:text-primary transition-colors">Features</a>
+            <a href="#services" className="text-sm text-gray-500 hover:text-primary transition-colors">Services</a>
             <a href="#events" className="text-sm text-gray-500 hover:text-primary transition-colors">Event Types</a>
             <a href="#testimonials" className="text-sm text-gray-500 hover:text-primary transition-colors">Testimonials</a>
           </div>
@@ -88,98 +48,109 @@ export default function LandingPage() {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-6">
-        <div className="absolute inset-0 bg-gradient-mesh" />
-        <div className="max-w-5xl mx-auto text-center relative z-10">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-pink-500/20 bg-pink-500/5 mb-8">
-              <Zap className="w-4 h-4 text-primary-500" />
-              <span className="text-sm text-primary-600 font-medium">Powered by Google Gemini AI</span>
-            </div>
-
-            <h1 className="text-6xl md:text-8xl mb-8 leading-none tracking-tight text-center max-w-3xl mx-auto select-none">
-              <span className="brand-title block text-5xl md:text-8xl font-black text-primary">EVENT</span>
-              <span className="brand-title block text-5xl md:text-8xl font-black text-primary">DESIGNING</span>
-              <span className="font-editorial italic font-normal text-accent-500 block text-6xl md:text-9xl -mt-4 md:-mt-8 ml-20 md:ml-40">Company</span>
-            </h1>
-
-            <p className="text-xl text-gray-500 max-w-2xl mx-auto mb-10 leading-relaxed">
-              From weddings to conferences, EventPilot AI handles planning, budgeting, vendors, 
-              guests, and marketing — so you can focus on creating unforgettable experiences.
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link
-                href="/signup"
-                className="btn-primary text-base px-8 py-3 group"
-              >
-                Start Planning Free
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                href="/login"
-                className="btn-secondary text-base px-8 py-3"
-              >
-                Watch Demo
-              </Link>
-            </div>
-          </motion.div>
-
-          {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20"
-          >
-            {stats.map((stat, i) => (
-              <div key={i} className="glass-card p-6 text-center">
-                <div className="text-3xl font-bold text-accent-500">
-                  {stat.value}
-                </div>
-                <div className="text-sm text-gray-500 mt-1">{stat.label}</div>
+      {/* Hero & Services Section */}
+      <section id="services" className="relative pt-32 pb-20 px-6 min-h-screen flex items-center">
+        <div className="absolute inset-0 bg-gradient-mesh pointer-events-none" />
+        
+        <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+          
+          {/* Left Column (Hero copy + brand design) - takes 7 cols on lg */}
+          <div className="lg:col-span-7 space-y-8 text-left">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="space-y-6"
+            >
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-pink-500/20 bg-pink-500/5">
+                <Zap className="w-4 h-4 text-primary-500" />
+                <span className="text-sm text-primary-600 font-medium">Powered by Google Gemini AI</span>
               </div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
 
-      {/* Features Section */}
-      <section id="features" className="py-24 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Everything You Need to Plan
-              <span className="text-indigo-400"> Perfect Events</span>
-            </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
-              Six intelligent AI agents work together to handle every aspect of your event.
-            </p>
-          </div>
+              {/* Breathtaking structured editorial title inspired by reference image */}
+              <div className="space-y-1 select-none">
+                <h1 className="brand-title text-6xl md:text-8xl font-black tracking-tight leading-none text-primary">
+                  EVENT
+                </h1>
+                <h1 className="brand-title text-6xl md:text-8xl font-black tracking-tight leading-none text-primary">
+                  DESIGNING
+                </h1>
+                <h1 className="font-editorial italic font-normal text-accent-500 text-6xl md:text-9xl leading-none pl-12 md:pl-28 -mt-2">
+                  Company
+                </h1>
+              </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {features.map((feature, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                className="glass-card p-8 group cursor-default"
-              >
-                <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${feature.color} flex items-center justify-center mb-5 group-hover:scale-110 transition-transform`}>
-                  {feature.icon}
+              <p className="text-lg md:text-xl text-gray-500 max-w-xl leading-relaxed">
+                From weddings to corporate conferences, EventPilot AI handles end-to-end planning, budgeting, vendors, guests, and marketing — so you can focus on creating unforgettable experiences.
+              </p>
+
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 pt-4">
+                <Link
+                  href="/signup"
+                  className="btn-primary text-base px-8 py-3.5 group"
+                >
+                  Start Planning Free
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link
+                  href="/login"
+                  className="btn-secondary text-base px-8 py-3.5"
+                >
+                  Watch Demo
+                </Link>
+              </div>
+            </motion.div>
+
+            {/* Clean Gold-lined Stats Box */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-8 border-t border-surface-300 max-w-2xl"
+            >
+              {stats.map((stat, i) => (
+                <div key={i} className="text-left border-l-2 border-accent-400 pl-4 py-2">
+                  <div className="text-2xl font-bold text-primary">{stat.value}</div>
+                  <div className="text-xs text-gray-500 uppercase tracking-wider font-semibold mt-0.5">{stat.label}</div>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
-                <p className="text-sm text-gray-400 leading-relaxed">{feature.description}</p>
-              </motion.div>
-            ))}
+              ))}
+            </motion.div>
           </div>
+
+          {/* Right Column (OUR SERVICES editorial card) - takes 5 cols on lg */}
+          <div className="lg:col-span-5 w-full">
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="editorial-card w-full shadow-2xl"
+            >
+              <h2 className="editorial-header">
+                OUR SERVICES
+              </h2>
+              <div className="editorial-list">
+                {[
+                  { num: '01', title: 'Concept & Theme Development', desc: 'AI-generated timelines, schedules, and custom checklists' },
+                  { num: '02', title: 'Budget Planning & Management', desc: 'Real-time expense logs and smart spending recommendations' },
+                  { num: '03', title: 'Venue & Vendor Coordination', desc: 'Map integration and smart recommendation engines' },
+                  { num: '04', title: 'AI Marketing & Copywriting', desc: 'Automated captions, emails, and flyers generated for any platform' },
+                  { num: '05', title: 'Guest & Logistics Management', desc: 'Digital QR ticketing, check-in, and auto-invitation emails' },
+                  { num: '06', title: 'On-Ground Schedule Execution', desc: 'Hour-by-hour itineraries with calendar sync notifications' },
+                ].map((service, index) => (
+                  <div key={index} className="editorial-item">
+                    <div className="editorial-left">
+                      <span className="editorial-num">{service.num}.</span>
+                      <div>
+                        <span className="editorial-content block">{service.title}</span>
+                        <span className="text-xs text-gray-500 block mt-0.5">{service.desc}</span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+
         </div>
       </section>
 
