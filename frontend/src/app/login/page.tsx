@@ -64,6 +64,7 @@ export default function LoginPage() {
                   className="input-field pl-11"
                   placeholder="you@example.com"
                   required
+                  suppressHydrationWarning
                 />
               </div>
             </div>
@@ -81,6 +82,7 @@ export default function LoginPage() {
                   placeholder="••••••••"
                   required
                   minLength={6}
+                  suppressHydrationWarning
                 />
               </div>
             </div>
@@ -89,6 +91,7 @@ export default function LoginPage() {
               type="submit"
               disabled={loading}
               className="btn-primary w-full justify-center py-3"
+              suppressHydrationWarning
             >
               {loading ? (
                 <Loader2 className="w-5 h-5 animate-spin" />

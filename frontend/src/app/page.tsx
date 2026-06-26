@@ -392,6 +392,7 @@ export default function LandingPage() {
                     onChange={(e) => setName(e.target.value)}
                     placeholder="E.g., John Doe"
                     className="input-field"
+                    suppressHydrationWarning
                   />
                 </div>
                 <div>
@@ -403,6 +404,7 @@ export default function LandingPage() {
                     onChange={(e) => setPhone(e.target.value)}
                     placeholder="E.g., +91 99300 48820"
                     className="input-field"
+                    suppressHydrationWarning
                   />
                 </div>
               </div>
@@ -416,6 +418,7 @@ export default function LandingPage() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="E.g., you@example.com"
                   className="input-field"
+                  suppressHydrationWarning
                 />
               </div>
               <div>
@@ -428,12 +431,14 @@ export default function LandingPage() {
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder="Tell us about the event date, type, guest count, or any custom requests..."
                   className="input-field resize-none"
+                  suppressHydrationWarning
                 />
               </div>
               <button
                 type="submit"
                 disabled={loading}
                 className="btn-primary w-full sm:w-auto px-8 py-3"
+                suppressHydrationWarning
               >
                 {loading ? 'Sending Inquiry...' : 'Submit Inquiry'}
               </button>
