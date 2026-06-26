@@ -4,8 +4,8 @@ import { AuthProvider } from "@/context/AuthContext";
 import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
-  title: "EventPilot AI — AI-Powered Event Management",
-  description: "Plan, organize, and manage events with AI assistance. From weddings to conferences, EventPilot AI helps you create unforgettable experiences.",
+  title: "Eventra AI — AI-Powered Event Management",
+  description: "Plan, organize, and manage events with AI assistance. From weddings to conferences, Eventra AI helps you create unforgettable experiences.",
   keywords: "event management, AI planner, wedding planning, conference management, event organization",
 };
 
@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="light">
       <body className="bg-grid bg-gradient-radial min-h-screen">
         <AuthProvider>
           {children}
@@ -23,10 +23,10 @@ export default function RootLayout({
             position="bottom-right"
             toastOptions={{
               style: {
-                background: '#1f2937',
-                color: '#f9fafb',
-                border: '1px solid rgba(255,255,255,0.08)',
-                borderRadius: '12px',
+                background: '#ffffff',
+                color: '#2e171b',
+                border: '1px solid #e8d0d4',
+                borderRadius: '10px',
                 fontSize: '14px',
               },
             }}

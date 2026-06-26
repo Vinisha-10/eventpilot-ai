@@ -43,7 +43,7 @@ export default function LoginPage() {
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center">
               <Sparkles className="w-6 h-6 text-white" />
             </div>
-            <span className="text-xl font-bold text-primary brand-title">EventPilot <span className="brand-accent">AI</span></span>
+            <span className="text-xl font-bold text-primary brand-title">Eventra <span className="brand-accent">AI</span></span>
           </Link>
           <h1 className="text-2xl font-bold text-primary">Welcome back</h1>
           <p className="text-gray-500 text-sm mt-1">Sign in to your account</p>

@@ -73,7 +73,7 @@ export default function ChatPage() {
     } catch {
       setMessages(prev => [...prev, {
         role: 'assistant',
-        content: "👋 Welcome to EventPilot AI! To enable the AI chat, please configure your Supabase URL, Supabase key, and Gemini API key in the environment variables. Until then, I can show you around the interface!",
+        content: "👋 Welcome to Eventra AI! To enable the AI chat, please configure your Supabase URL, Supabase key, and Gemini API key in the environment variables. Until then, I can show you around the interface!",
         suggestions: ['Create a new event', 'View the dashboard', 'Explore features'],
       }]);
     } finally {

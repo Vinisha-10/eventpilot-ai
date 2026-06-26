@@ -64,7 +64,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center">
               <Sparkles className="w-5 h-5 text-white" />
             </div>
-            <span className="text-base font-bold text-primary brand-title">EventPilot <span className="brand-accent">AI</span></span>
+            <span className="text-base font-bold text-primary brand-title">Eventra <span className="brand-accent">AI</span></span>
           </Link>
           <button onClick={() => setSidebarOpen(false)} className="md:hidden text-gray-400 hover:text-white">
             <X className="w-5 h-5" />
@@ -131,7 +131,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
           <button onClick={() => setSidebarOpen(true)} className="text-gray-400 hover:text-white">
             <Menu className="w-6 h-6" />
           </button>
-          <span className="text-sm font-semibold text-white">EventPilot AI</span>
+          <span className="text-sm font-semibold text-white">Eventra AI</span>
           <button className="text-gray-400 hover:text-white relative">
             <Bell className="w-5 h-5" />
           </button>
